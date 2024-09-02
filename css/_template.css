@@ -1,0 +1,212 @@
+/*Carrega a fonte "roboto" do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*Carrega a biblioteca de icones do Font Awesome*/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
+
+
+/* Reset básico para remover margens e paddings padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Reset do body e #wrap*/
+html,
+body,
+#wrap {
+    position: relative;
+    width: 100%;
+    /*altura*/
+    height: 100%;
+    /*largura*/
+}
+
+/*Reset dos links*/
+a {
+    text-decoration: none;
+    color: steelblue;
+}
+
+/*Colocando Roboto como fonte padrão do site e seu tamanho*/
+body {
+    /*fonte padrão do site*/
+    font-family: Roboto, sans-serif;
+
+    /*Tamanho da fonte -> 16px => 1rem*/
+    font-size: 1rem;
+
+    background-image: url("/img/foto_galeria.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#wrap {
+    max-width: 64rem;
+    /*64 rem x 16 px = 1024px*/
+    /*Largura máxima -> 1080px(Full HD) - o pixel da barra de rolagem*/
+    min-width: 17.5rem;
+    /*17.5rem x 16px = 280px*/
+    /*Largura mínima -> 320px - barra de rolagem*/
+    margin: auto;
+    /* Bloco Centralizado*/
+
+    /*Sticky Footer*/
+    display: flex;
+    flex-direction: column;
+}
+
+
+/**Header (cabeçalho)**/
+
+#wrap>header {
+    background-color: rgb(209, 202, 98);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#wrap>header>a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(248, 3, 3);
+}
+
+#wrap>header img {
+    display: block;
+    height: 2rem;
+    margin: 0.4rem;
+}
+
+#wrap>header iframe{
+    display: block;
+    height: 2rem;
+    margin: 0.4rem;
+
+}
+
+/*Nav(Menu)*/
+
+#wrap>nav {
+    background-color: rgb(160, 155, 204);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#wrap>nav a {
+    color: whitesmoke;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem .5rem;
+    align-items: center;
+    margin: auto;
+}
+
+#wrap>nav a:hover {
+    background-color: #ddd;
+    /* Cor de fundo ao passar o mouse sobre os itens */
+}
+
+
+
+/**Main(Conteúdo)**/
+
+#wrap>main {
+    /*Sticky Footer*/
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.galeria_1,
+.galeria_2, .galeria_3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+}
+/*
+.galeria_1 {
+    background-color: aqua;
+}
+
+.galeria_2 {
+    background-color: aquamarine;
+}*/
+
+.foto {
+    /*flex: 1 1 300px; Chorme não lidar bem com basis*/
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 300px;
+    max-width: 300px;
+    /* Responsividade: fotos ocupam 300px ou mais */
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.foto img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.foto h4 {
+    margin: 0;
+    /* Remove a margem superior e inferior */
+    font-size: 1rem;
+    /* Tamanho da fonte para o título */
+}
+
+/**Footer(Rodapé)**/
+
+#wrap>footer {
+    background-color: #201b1b;
+    /* Cor de fundo escura */
+    color: #fff;
+    /* Texto branco */
+    padding: 20px;
+    /* Espaçamento interno */
+    text-align: center;
+    /* Centraliza o texto */
+}
+
+#wrap>footer a {
+    color: #fff;
+    /* Cor dos links */
+    text-decoration: none;
+    /* Remove o sublinhado dos links */
+}
+
+#wrap>footer hr {
+    border: none;
+    /* Remove a borda padrão */
+    border-top: 2px solid #f5f4f4;
+    /* Adiciona uma linha sólida de 2px */
+    margin: 20px 0;
+    /* Aumenta o espaço acima e abaixo da linha */
+    width: 100%;
+    /* Opcional: ajusta a largura da linha */
+    background-color: transparent;
+    /* Remove qualquer cor de fundo */
+}
+
+.links_uteis {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+}
+
+.links_uteis nav {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.8;
+}
