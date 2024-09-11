@@ -8,6 +8,7 @@ main label {
 main form {
     display: block;
     margin: auto;
+    margin-top: 1rem;
     max-width: 500px;
 }
 
@@ -68,4 +69,10 @@ main aside div{
 
 main aside div i {
     margin: .5rem 0;
+}
+
+.atencao{
+    margin-top: .5rem;
+    text-align: center;
+    color: red;
 }
