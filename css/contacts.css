@@ -1,0 +1,71 @@
+/* Folhas de estilo da página de contatos → contacts.html */
+
+main label {
+    display: block;
+    padding: 0 0 .5rem .25rem;
+}
+
+main form {
+    display: block;
+    margin: auto;
+    max-width: 500px;
+}
+
+main input,
+main textarea,
+main button {
+    padding: .5rem;
+    border-radius: .3rem;
+}
+
+main input,
+main textarea {
+   width: 100%;
+   border: 1px solid red;
+   border-bottom: 2px solid red;
+   border-right: 2px solid red; 
+   background-color: rgb(255, 240, 240);
+}
+
+main textarea {
+    height: 6rem;
+    resize: vertical;
+}
+
+main button {
+    border: none;
+    background-color: gray;
+    color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    pointer-events: none;
+}
+
+main input:valid,
+main textarea:valid {
+    border: 1px solid green;
+    border-bottom: 2px solid green;
+    border-right: 2px solid green; 
+    background-color: rgb(232, 240, 254);
+}
+
+main form:valid button {
+    background-color: steelblue;
+    pointer-events: all;
+    cursor: pointer;
+}
+
+main form small {
+    color: grey;
+}
+
+main aside div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+main aside div i {
+    margin: .5rem 0;
+}

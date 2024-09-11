@@ -65,7 +65,9 @@ body {
     background-color: rgb(209, 202, 98);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /*align-items:center;*/
+    margin-right: .5rem;
+    padding: .25rem;
 }
 
 #wrap>header>a {
@@ -112,7 +114,18 @@ body {
     /* Cor de fundo ao passar o mouse sobre os itens */
 }
 
+/* Botão do menu principal em mobile */
 
+#toggleMenu {
+    margin-left: auto;
+    margin-right: .5rem;
+}
+
+#toggleMenu i {
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
 
 /**Main(Conteúdo)**/
 
