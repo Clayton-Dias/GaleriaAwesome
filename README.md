@@ -56,7 +56,7 @@ O projeto possui a seguinte estrutura de diretórios e arquivos:
 /galeria-awesome
 │
 ├── /css
-│   ├── _template.css
+│   ├── template.css
 │   └── index.css
 │
 ├── /img
