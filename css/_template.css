@@ -39,7 +39,7 @@ body {
     /*Tamanho da fonte -> 16px => 1rem*/
     font-size: 1rem; /* Define o tamanho da fonte base como 1 rem (16px) */
 
-    background-image: url("/img/foto_galeria.jpg"); /* Define uma imagem de fundo para o corpo da página */
+    background-image: url("img/foto_galeria.jpg"); /* Define uma imagem de fundo para o corpo da página */
     background-repeat: no-repeat; /* Evita a repetição da imagem de fundo */
     background-size: cover; /* Faz a imagem de fundo cobrir todo o container */
     background-attachment: fixed; /* Mantém a imagem de fundo fixa durante o rolar da página */
