@@ -1,31 +1,57 @@
-// Função principal que inicializa a aplicação
-function runApp() {
-    // Esconde o menu e o elemento com id 'fumaca' ao carregar a página
-    $('#wrap>nav').hide();
-    $('#cortina').hide();
+$(document).ready(function() {
+    // Inicializa a aplicação quando o documento estiver pronto
+    runApp();
+});
 
-    // Adiciona um listener de clique ao botão de id 'toggleMenu'
-    $('#toggleMenu').click(controlaMenu);
+function runApp() {
+    // Ajusta o menu ao carregar a página
+    resizeMenu();
+
+    // Ajusta o menu ao redimensionar a janela
+    $(window).resize(resizeMenu);
+
+    // Alterna a visibilidade do menu ao clicar no botão
+    $('#toogleMenu').click(toggleMenu);
 }
 
-// Função para controlar a exibição do menu e do elemento 'fumaca'
-function controlaMenu() {
-    // Alterna a visibilidade do menu e do elemento 'fumaca'
+function resizeMenu() {
+    // Mostra ou esconde o menu com base na largura da janela
+    if (window.innerWidth >= 600) {
+        showMenu(true);
+    } else {
+        hideMenu();
+    }
+}
+
+function toggleMenu() {
+    //console.log("click")
+    // Alterna a visibilidade do menu ao clicar no botão
     if ($('#wrap>nav').is(':visible')) {
-        // Se o menu está visível, esconde-o e também o 'fumaca'
-        $('#wrap>nav, #cortina').hide('fast');
-        // Restaura o scroll do corpo
+        hideMenu();
+    } else {
+        showMenu();
+    }
+    return false; // Previne o comportamento padrão do clique
+}
+
+function showMenu(noSmoke) {
+    // Mostra o menu
+    $('#wrap>nav').show('fast');
+
+    if (noSmoke) {
+        // Esconde o fundo escuro e permite rolagem
+        $('#mcortina').hide('fast');
         $('body').css('overflow', 'auto');
     } else {
-        // Caso contrário, mostra o menu e o 'fumaca'
-        $('#wrap>nav, #cortina').show('fast');
-        // Remove o scroll do corpo para evitar rolagem quando o menu está aberto
+        // Mostra o fundo escuro e desabilita rolagem
+        $('#cortina').show('fast');
         $('body').css('overflow', 'hidden');
     }
-
-    // Evita que o clique no botão de toggleMenu cause o comportamento padrão do link
-    return false;
 }
 
-// Inicializa a aplicação quando o documento estiver completamente carregado
-$(document).ready(runApp);
+function hideMenu() {
+    // Esconde o menu e o fundo escuro, permite rolagem
+    $('#wrap>nav').hide('fast');
+    $('#cortina').hide('fast');
+    $('body').css('overflow', 'auto');
+}

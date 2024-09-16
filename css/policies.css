@@ -1,18 +1,47 @@
+/* Estiliza a classe 'politicas' que provavelmente é usada para exibir uma seção de políticas*/
+
 .politicas {
+    /* Define a largura máxima do elemento para 800 pixels. 
+    Isso evita que o conteúdo fique muito largo em telas maiores. */
     max-width: 800px;
+
+    /* Centraliza o elemento horizontalmente na página. 
+    'auto' nas margens esquerda e direita ajusta automaticamente o espaço para centralizar o elemento. */
     margin: 0 auto;
+
+    /* Define o fundo do elemento como branco. */
     background: white;
+
+    /* Adiciona 20 pixels de espaçamento interno (padding) em todos os lados do elemento, 
+    garantindo que o conteúdo não fique encostado nas bordas. */
     padding: 20px;
+
+    /* Aplica um raio de 8 pixels nos cantos para arredondar o contorno do elemento, 
+    conferindo um visual mais suave. */
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);    
+
+    /* Adiciona uma sombra sutil ao redor do elemento.
+    A sombra é preta com 10% de opacidade, criando um efeito de profundidade. */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Estiliza os títulos de nível 2 dentro do elemento com a classe 'politicas' */
+
 .politicas h2 {
+    /* Define a cor do texto como um tom de azul (código hexadecimal #007BFF). */
     color: #007BFF;
+
+    /* Adiciona um espaço inferior de 10 pixels abaixo do título, 
+    separando-o do conteúdo que vem a seguir. */
     margin-bottom: 10px;
 }
 
+/* Estiliza os parágrafos dentro do elemento com a classe 'politicas' */
+
 .politicas p {
+    /* Adiciona um espaço inferior de 20 pixels abaixo de cada parágrafo, criando uma separação visual entre os parágrafos. */
     margin-bottom: 20px;
+
+    /* Define a altura da linha como 1.8, o que aumenta o espaçamento entre linhas e melhora a legibilidade do texto. */
     line-height: 1.8;
 }

@@ -1,3 +1,5 @@
+/** Importações **/
+
 /*Carrega a fonte "roboto" do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
@@ -7,219 +9,223 @@
 
 /* Reset básico para remover margens e paddings padrão */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove paddings padrão */
+    box-sizing: border-box; /* Inclui bordas e paddings no cálculo da largura e altura dos elementos */
 }
 
-/*Reset do body e #wrap*/
+/* Reset do HTML, body e #wrap */
 html,
 body,
 #wrap {
-    position: relative;
-    width: 100%;
+    position: relative; /* Permite o posicionamento absoluto dos elementos filhos dentro desses containers */
+    width: 100%; /* Define a largura como 100% do container pai */
     /*altura*/
-    height: 100%;
+    height: 100%; /* Define a altura como 100% do container pai *
     /*largura*/
 }
 
 /*Reset dos links*/
 a {
-    text-decoration: none;
-    color: steelblue;
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    color: steelblue; /* Define a cor dos links como steelblue */
 }
 
 /*Colocando Roboto como fonte padrão do site e seu tamanho*/
 body {
     /*fonte padrão do site*/
-    font-family: Roboto, sans-serif;
+    font-family: Roboto, sans-serif; /* Define "Roboto" como fonte padrão, com uma fonte sans-serif como fallback */
 
     /*Tamanho da fonte -> 16px => 1rem*/
-    font-size: 1rem;
+    font-size: 1rem; /* Define o tamanho da fonte base como 1 rem (16px) */
 
-    background-image: url("/img/foto_galeria.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    background-image: url("/img/foto_galeria.jpg"); /* Define uma imagem de fundo para o corpo da página */
+    background-repeat: no-repeat; /* Evita a repetição da imagem de fundo */
+    background-size: cover; /* Faz a imagem de fundo cobrir todo o container */
+    background-attachment: fixed; /* Mantém a imagem de fundo fixa durante o rolar da página */
 }
 
+/* Estilo do wrapper principal */
 #wrap {
-    max-width: 64rem;
+    max-width: 64rem;  /* Define a largura máxima como 64 rem (1024px) */
     /*64 rem x 16 px = 1024px*/
     /*Largura máxima -> 1080px(Full HD) - o pixel da barra de rolagem*/
-    min-width: 17.5rem;
+    min-width: 17.5rem; /* Define a largura mínima como 17.5 rem (280px) */
     /*17.5rem x 16px = 280px*/
     /*Largura mínima -> 320px - barra de rolagem*/
-    margin: auto;
+    margin: auto; /* Centraliza o wrapper horizontalmente */
     /* Bloco Centralizado*/
 
     /*Sticky Footer*/
-    display: flex;
-    flex-direction: column;
+    display: flex; /* Define o layout como flexível */
+    flex-direction: column; /* Alinha os filhos do wrapper em uma coluna */
 }
 
 
 /**Header (cabeçalho)**/
 
 #wrap>header {
-    background-color: rgb(209, 202, 98);
-    display: flex;
-    flex-direction: column;
-    /*align-items:center;*/
-    margin-right: .5rem;
-    padding: .25rem;
+    background-color: rgb(209, 202, 98); /* Define a cor de fundo do cabeçalho como um tom amarelado */
+    display: flex; /* Usa o layout flexível para os itens no cabeçalho */
+    flex-direction: row; /* Alinha os itens em linha horizontal */
+    align-items: center; /* Alinha verticalmente os itens ao centro */
+    margin-right: .5rem; /* Adiciona uma margem direita */
+    padding: .25rem; /* Adiciona um padding interno */
+    width: 100%; /* Define a largura do cabeçalho como 100% do container pai */
+    justify-content: space-between; /* Distribui o espaço entre os itens no cabeçalho */
 }
 
 #wrap>header>a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: rgb(248, 3, 3);
+    display: flex; /* Usa o layout flexível para o link do cabeçalho */
+    align-items: center; /* Alinha verticalmente os itens do link ao centro */
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: rgb(248, 3, 3); /* Define a cor do texto do link como vermelha */
 }
 
 #wrap>header img {
-    display: block;
-    height: 2rem;
-    margin: 0.4rem;
+    display: block; /* Remove o espaço em branco abaixo da imagem */
+    height: 2rem; /* Define a altura da imagem */
+    margin: 0.4rem; /* Adiciona uma margem ao redor da imagem */
 }
 
-#wrap>header iframe{
-    display: block;
-    height: 2rem;
-    margin: 0.4rem;
+/* Estilo do botão do menu principal em dispositivos móveis */
+#toogleMenu {
+    margin-left: auto; /* Empurra o botão para a borda direita */
+    margin-right: .5rem; /* Adiciona uma margem direita */
+    cursor: pointer; /* Muda o cursor para uma mão ao passar sobre o botão */
+}
 
+#toogleMenu i {
+    font-size: 1.8rem; /* Define o tamanho do ícone do botão do menu */
 }
 
 /*Nav(Menu)*/
 
 #wrap>nav {
-    background-color: rgb(160, 155, 204);
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    background-color: rgb(160, 155, 204); /* Define a cor de fundo do menu como um tom roxo claro */
+    display: flex; /* Usa o layout flexível para os itens no menu */
+    align-items: center; /* Alinha verticalmente os itens ao centro */
+    justify-content: space-around; /* Distribui o espaço igualmente entre os itens no menu */
 }
 
 #wrap>nav a {
-    color: whitesmoke;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem .5rem;
-    align-items: center;
-    margin: auto;
+    color: whitesmoke; /* Define a cor do texto dos links no menu como branco */
+    text-decoration: none; /* Remove o sublinhado dos links no menu */
+    display: flex; /* Usa o layout flexível para os links no menu */
+    flex-direction: column; /* Alinha os itens dos links em uma coluna */
+    padding: 1rem .5rem; /* Adiciona padding ao redor do texto dos links */
+    align-items: center; /* Alinha horizontalmente os itens dos links ao centro */
+    margin: auto; /* Adiciona uma margem automática para centralizar os links */
 }
 
 #wrap>nav a:hover {
-    background-color: #ddd;
-    /* Cor de fundo ao passar o mouse sobre os itens */
+    background-color: #ddd; /* Muda a cor de fundo dos links ao passar o mouse sobre eles */
 }
 
-/* Botão do menu principal em mobile */
-
-#toggleMenu {
-    margin-left: auto;
-    margin-right: .5rem;
-}
-
-#toggleMenu i {
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
-}
-
-/**Main(Conteúdo)**/
+/** Main (Conteúdo) **/
 
 #wrap>main {
-    /*Sticky Footer*/
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
+    flex-grow: 1; /* Faz com que o main ocupe o espaço restante disponível */
+    display: flex; /* Usa o layout flexível para o conteúdo principal */
+    flex-direction: column; /* Alinha os itens em uma coluna */
 }
 
+main>article h1 {
+    text-align: center; /* Centraliza o texto do título */
+    margin-top: .5rem; /* Adiciona uma margem superior ao título */
+}
+
+/* Estilo das galerias */
 .galeria_1,
-.galeria_2, .galeria_3 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 1rem;
-}
-/*
-.galeria_1 {
-    background-color: aqua;
+.galeria_2,
+.galeria_3 {
+    display: flex; /* Usa o layout flexível para os itens das galerias */
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte quando necessário */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    padding: 1rem; /* Adiciona padding ao redor das galerias */
 }
 
-.galeria_2 {
-    background-color: aquamarine;
-}*/
-
+/* Estilo das fotos */
 .foto {
-    /*flex: 1 1 300px; Chorme não lidar bem com basis*/
-    flex-grow: 1;
-    flex-shrink: 1;
-    min-width: 300px;
-    max-width: 300px;
-    /* Responsividade: fotos ocupam 300px ou mais */
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-grow: 1; /* Permite que o item da foto cresça para ocupar o espaço disponível */
+    flex-shrink: 1; /* Permite que o item da foto encolha se necessário */
+    min-width: 300px; /* Define a largura mínima das fotos */
+    max-width: 300px; /* Define a largura máxima das fotos */
+    margin: 10px; /* Adiciona uma margem ao redor das fotos */
+    display: flex; /* Usa o layout flexível para os itens da foto */
+    flex-direction: column; /* Alinha os itens da foto em uma coluna */
+    align-items: center; /* Alinha horizontalmente os itens da foto ao centro */
 }
 
 .foto img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px;
+    width: 100%; /* Faz com que a imagem ocupe toda a largura do container da foto */
+    height: auto; /* Mantém a proporção da altura da imagem */
+    display: block; /* Remove o espaço em branco abaixo da imagem */
+    border-radius: 8px; /* Arredonda as bordas da imagem */
 }
 
 .foto h4 {
-    margin: 0;
-    /* Remove a margem superior e inferior */
-    font-size: 1rem;
-    /* Tamanho da fonte para o título */
+    margin: 0; /* Remove a margem superior e inferior do título da foto */
+    font-size: 1rem; /* Define o tamanho da fonte para o título da foto */
 }
 
-/**Footer(Rodapé)**/
+/** Footer (Rodapé) **/
 
 #wrap>footer {
-    background-color: #201b1b;
-    /* Cor de fundo escura */
-    color: #fff;
-    /* Texto branco */
-    padding: 20px;
-    /* Espaçamento interno */
-    text-align: center;
-    /* Centraliza o texto */
+    background-color: #201b1b; /* Define a cor de fundo do rodapé como escura */
+    color: #fff; /* Define a cor do texto do rodapé como branca */
+    padding: 20px; /* Adiciona padding ao redor do conteúdo do rodapé */
+    text-align: center; /* Centraliza o texto dentro do rodapé */
 }
 
 #wrap>footer a {
-    color: #fff;
-    /* Cor dos links */
-    text-decoration: none;
-    /* Remove o sublinhado dos links */
+    color: #fff; /* Define a cor dos links no rodapé como branca */
+    text-decoration: none; /* Remove o sublinhado dos links no rodapé */
 }
 
 #wrap>footer hr {
-    border: none;
-    /* Remove a borda padrão */
-    border-top: 2px solid #f5f4f4;
-    /* Adiciona uma linha sólida de 2px */
-    margin: 20px 0;
-    /* Aumenta o espaço acima e abaixo da linha */
-    width: 100%;
-    /* Opcional: ajusta a largura da linha */
-    background-color: transparent;
-    /* Remove qualquer cor de fundo */
+    border: none; /* Remove a borda padrão do elemento <hr> */
+    border-top: 2px solid #f5f4f4; /* Adiciona uma linha sólida de 2px no topo do <hr> */
+    margin: 20px 0; /* Adiciona uma margem acima e abaixo da linha */
+    width: 100%; /* Define a largura da linha como 100% do container */
+    background-color: transparent; /* Remove qualquer cor de fundo da linha */
 }
 
 .links_uteis {
-    display: flex;
-    justify-content: space-around;
-    padding: 1rem 0;
+    display: flex; /* Usa o layout flexível para os links úteis */
+    justify-content: space-around; /* Distribui o espaço igualmente entre os links úteis */
+    padding: 1rem 0; /* Adiciona padding ao redor dos links úteis */
 }
 
 .links_uteis nav {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.8;
+    display: flex; /* Usa o layout flexível para o nav dentro de links úteis */
+    flex-direction: column; /* Alinha os itens do nav em uma coluna */
+    line-height: 1.8; /* Define o espaçamento entre linhas dentro do nav */
+}
+
+/* Estilo para telas de 600px ou maior */
+@media screen and (min-width: 600px) {
+    #wrap > header {
+        justify-content: center; /* Centraliza horizontalmente os itens do cabeçalho */
+        margin-right: 0; /* Remove a margem direita */
+        flex-direction: column; /* Alinha os itens verticalmente */
+        align-items: center; /* Alinha os itens verticalmente ao centro */
+    }
+
+    #toogleMenu,
+    #cortina {
+        display: none; /* Oculta o botão de menu e o elemento 'cortina' em telas maiores */
+    }
+}
+
+/***** Uso geral *****/
+
+/* Estilo para o elemento 'cortina' */
+#cortina {
+    position: absolute; /* Posiciona o elemento 'cortina' de forma absoluta em relação ao container pai */
+    width: 100%; /* Define a largura como 100% do container pai */
+    height: 100%; /* Define a altura como 100% do container pai */
+    background: rgba(255, 255, 255, .9); /* Define um fundo branco com 90% de opacidade */
+    top: 8.1rem; /* Posiciona o elemento 'cortina' a 9 rem do topo do container pai */
+    z-index: 100; /* Define a camada de sobreposição do elemento 'cortina' para garantir que ele fique acima de outros elementos */
 }

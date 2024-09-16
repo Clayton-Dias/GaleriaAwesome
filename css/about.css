@@ -1,0 +1,25 @@
+/** Sobre Nós **/
+
+.about {
+    background-color: rgba(240, 240, 240, 0.9); /* Define um fundo cinza claro com 90% de opacidade, criando um efeito de leve transparência. */
+    padding: 2rem; /* Adiciona 2 rem de espaçamento interno em todos os lados do container, criando um buffer em torno do conteúdo. */
+    border-radius: 8px; /* Arredonda os cantos do container com um raio de 8 pixels, conferindo um visual mais suave e amigável. */
+    text-align: center; /* Centraliza o texto dentro do container, alinhando-o ao centro horizontalmente. */
+    margin: 1rem 0; /* Adiciona uma margem de 1 rem acima e abaixo do container, separando-o dos elementos vizinhos. */
+}
+
+/* Estiliza o título de nível 1 dentro do container 'about'. */
+.about h1 {
+    font-size: 2rem; /* Define o tamanho da fonte para o título como 2 rem, tornando-o destacado e de fácil leitura. */
+    color: #333; /* Define a cor do texto como um tom escuro de cinza (#333), garantindo um bom contraste e legibilidade. */
+    margin-bottom: 1rem; /* Adiciona uma margem inferior de 1 rem abaixo do título, criando espaço entre o título e o conteúdo seguinte. */
+}
+
+/* Estiliza os parágrafos dentro do container 'about'. */
+.about p {
+    font-size: 1.125rem; /* Define o tamanho da fonte para os parágrafos como 1.125 rem, um pouco maior que o padrão, melhorando a legibilidade. */
+    color: #555; /* Define a cor do texto como um tom mais claro de cinza (#555), proporcionando um contraste suave com o fundo e o título. */
+    line-height: 1.6; /* Define o espaçamento entre linhas como 1.6, aumentando a legibilidade e a clareza do texto. */
+    margin-bottom: 1rem; /* Adiciona uma margem inferior de 1 rem abaixo de cada parágrafo, separando-os de outros elementos. */
+}
+

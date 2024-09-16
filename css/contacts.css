@@ -1,78 +1,109 @@
 /* Folhas de estilo da página de contatos → contacts.html */
 
+/* Estiliza os títulos de nível 2 dentro do elemento <article> dentro do <main>, centralizando o texto e adicionando uma margem inferior. */
+main > article > h2 {
+    text-align: center; /* Centraliza o texto do título. */
+    margin-bottom: .5rem; /* Adiciona um espaço inferior de 0.5 rem abaixo do título. */
+    margin-top: .5rem; /* Adiciona um espaço inferior de 0.5 rem acima do título. */
+}
+
+/* Estiliza os parágrafos dentro do elemento <article> dentro do <main>, centralizando o texto. */
+main > article > p {
+    text-align: center; /* Centraliza o texto dos parágrafos. */
+}
+
+/* Estiliza os elementos <label> dentro do <main>, exibindo-os como blocos e adicionando um padding. */
 main label {
-    display: block;
-    padding: 0 0 .5rem .25rem;
+    display: block; /* Faz com que cada <label> ocupe toda a largura disponível, um embaixo do outro. */
+    padding: 0 0 .5rem .25rem; /* Adiciona padding em todos os lados, exceto o superior, e com maior padding à esquerda. */
 }
 
+/* Estiliza o formulário dentro do <main>, centralizando-o e definindo uma largura máxima. */
 main form {
-    display: block;
-    margin: auto;
-    margin-top: 1rem;
-    max-width: 500px;
+    display: block; /* Faz com que o formulário ocupe toda a largura disponível. */
+    margin: auto; /* Centraliza o formulário horizontalmente. */
+    margin-top: 1rem; /* Adiciona um espaço superior de 1 rem acima do formulário. */
+    max-width: 500px; /* Define a largura máxima do formulário como 500 pixels. */
 }
 
+/* Estiliza os elementos <input>, <textarea>, e <button> dentro do <main>, adicionando padding, bordas arredondadas e espaçamento inferior. */
 main input,
 main textarea,
 main button {
-    padding: .5rem;
-    border-radius: .3rem;
+    padding: .5rem; /* Adiciona 0.5 rem de padding interno em todos os lados. */
+    border-radius: .3rem; /* Arredonda as bordas com um raio de 0.3 rem. */
+    margin-bottom: .8rem; /* Adiciona um espaço inferior de 0.8 rem abaixo de cada elemento. */
 }
 
+/* Define a largura de <input> e <textarea> dentro do <main> para 100%, fazendo com que eles se ajustem ao tamanho do container. */
 main input,
 main textarea {
-   width: 100%;
-   border: 1px solid red;
-   border-bottom: 2px solid red;
-   border-right: 2px solid red; 
-   background-color: rgb(255, 240, 240);
+    width: 100%; /* Faz com que o <input> e <textarea> ocupem toda a largura disponível do seu container. */
 }
 
+/* Estiliza o <textarea> dentro do <main>, definindo uma altura específica e permitindo redimensionamento vertical. */
 main textarea {
-    height: 6rem;
-    resize: vertical;
+    height: 6rem; /* Define a altura do <textarea> como 6 rem. */
+    resize: vertical; /* Permite apenas o redimensionamento vertical do <textarea>. */
 }
 
+/* Estiliza o <button> dentro do <main>, removendo a borda padrão e aplicando uma cor de fundo cinza com texto branco. Também desativa a interação com o botão inicialmente. */
 main button {
-    border: none;
-    background-color: gray;
-    color: white;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    pointer-events: none;
+    border: none; /* Remove a borda padrão do botão. */
+    background-color: gray; /* Define a cor de fundo do botão como cinza. */
+    color: white; /* Define a cor do texto do botão como branco. */
+    padding-left: 1rem; /* Adiciona padding à esquerda do botão. */
+    padding-right: 1rem; /* Adiciona padding à direita do botão. */
+    pointer-events: none; /* Desativa a interação com o botão (não clicável) inicialmente. */
 }
 
+/* Estiliza <input> e <textarea> com base na validade dos dados inseridos. Adiciona bordas vermelhas e um fundo colorido para campos inválidos. */
+main input:invalid,
+main textarea:invalid {
+    border: 1px solid red; /* Define uma borda vermelha fina para campos inválidos. */
+    border-bottom: 2px solid red; /* Define uma borda inferior vermelha mais espessa para campos inválidos. */
+    border-right: 2px solid red; /* Define uma borda direita vermelha mais espessa para campos inválidos. */
+    background-color: rgb(255, 240, 240); /* Define um fundo rosa claro para campos inválidos. */
+}
+
+/* Estiliza <input> e <textarea> com base na validade dos dados inseridos. Adiciona bordas verdes e um fundo colorido para campos válidos. */
 main input:valid,
 main textarea:valid {
-    border: 1px solid green;
-    border-bottom: 2px solid green;
-    border-right: 2px solid green; 
-    background-color: rgb(232, 240, 254);
+    border: 1px solid green; /* Define uma borda verde fina para campos válidos. */
+    border-bottom: 2px solid green; /* Define uma borda inferior verde mais espessa para campos válidos. */
+    border-right: 2px solid green; /* Define uma borda direita verde mais espessa para campos válidos. */
+    background-color: rgb(232, 240, 254); /* Define um fundo azul claro para campos válidos. */
 }
 
+/* Estiliza o botão dentro do formulário apenas se o formulário estiver válido. Altera a cor de fundo do botão e permite a interação. */
 main form:valid button {
-    background-color: steelblue;
-    pointer-events: all;
-    cursor: pointer;
+    background-color: steelblue; /* Define a cor de fundo do botão como azul aço quando o formulário estiver válido. */
+    pointer-events: all; /* Permite a interação com o botão quando o formulário estiver válido. */
+    cursor: pointer; /* Muda o cursor para uma mão ao passar sobre o botão, indicando que ele é clicável. */
 }
 
+/* Estiliza o elemento <small> dentro do <main>, definindo a cor do texto como cinza. */
 main form small {
-    color: grey;
+    color: grey; /* Define a cor do texto como cinza. */
 }
 
-main aside div{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
+/* Estiliza os elementos <div> dentro do <aside> no <main>, usando flexbox para alinear e distribuir os itens de forma organizada. */
+main aside div {
+    display: flex; /* Define o contêiner como flexível, permitindo o uso de propriedades flexbox. */
+    align-items: center; /* Alinha os itens ao centro verticalmente. */
+    justify-content: space-around; /* Distribui o espaço igualmente ao redor dos itens. */
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte se não houver espaço suficiente na linha atual. */
 }
 
+/* Adiciona margens verticais aos ícones dentro de <div> no <aside>, separando-os dos outros elementos. */
 main aside div i {
-    margin: .5rem 0;
+    margin: .5rem 0; /* Adiciona uma margem vertical de 0.5 rem acima e abaixo dos ícones. */
 }
 
-.atencao{
-    margin-top: .5rem;
-    text-align: center;
-    color: red;
+/* Estiliza o elemento com a classe 'atencao', adicionando uma margem superior, centralizando o texto e aplicando uma cor vermelha com sublinhado. */
+.atencao {
+    margin-top: .5rem; /* Adiciona um espaço superior de 0.5 rem acima do elemento. */
+    text-align: center; /* Centraliza o texto dentro do elemento. */
+    color: red; /* Define a cor do texto como vermelho. */
+    text-decoration: underline; /* Sublinha o texto. */
 }

@@ -1,0 +1,26 @@
+/** Introdução **/
+
+/* Estiliza o container com a classe 'intro', que provavelmente é usado para introduzir seções ou blocos de conteúdo. */
+.intro {
+    background-color: rgba(255, 255, 255, 0.8); /* Define um fundo branco com 80% de opacidade, criando um efeito de leve transparência. */
+    padding: 2rem; /* Adiciona 2 rem de espaçamento interno em todos os lados do container. */
+    border-radius: 8px; /* Arredonda os cantos do container com um raio de 8 pixels, conferindo um visual mais suave. */
+    text-align: center; /* Centraliza o texto dentro do container. */
+    margin: 1rem 0; /* Adiciona uma margem de 1 rem acima e abaixo do container, separando-o de outros elementos. */
+}
+
+/* Estiliza o título de nível 1 dentro do container 'intro'. */
+.intro h1 {
+    font-size: 2rem; /* Define o tamanho da fonte para o título como 2 rem, tornando-o maior e mais destacado. */
+    color: #333; /* Define a cor do texto como um tom escuro de cinza (#333), garantindo uma boa legibilidade. */
+    margin-bottom: 1rem; /* Adiciona uma margem inferior de 1 rem abaixo do título, separando-o do conteúdo abaixo. */
+}
+
+/* Estiliza os parágrafos dentro do container 'intro'. */
+.intro p {
+    font-size: 1.125rem; /* Define o tamanho da fonte para os parágrafos como 1.125 rem, um pouco maior que o tamanho padrão. */
+    color: #555; /* Define a cor do texto como um tom mais claro de cinza (#555), que é mais suave que o título. */
+    line-height: 1.6; /* Define o espaçamento entre linhas como 1.6, aumentando a legibilidade do texto. */
+    margin-bottom: 1rem; /* Adiciona uma margem inferior de 1 rem abaixo de cada parágrafo, separando-o dos elementos seguintes. */
+}
+

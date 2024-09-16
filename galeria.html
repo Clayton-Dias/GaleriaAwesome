@@ -6,7 +6,6 @@
 
     <!-- Carregando CSS -->
     <link rel="stylesheet" href="/css/_template.css">
-    <link rel="stylesheet" href="/css/index.css">
 
     <!-- Icone da página -->
      <link rel="shortcut icon" href="/img/galeria.png">
@@ -20,18 +19,17 @@
         <!---->
         <!--Cabeçalho-->
         <header>
-            <!-- Logo com link para a página inicial -->
-            <a href="/index.html" title="Ir para página inicial">
+            <!--Logo-->
+            <a href="/" title="Ir para página inicial">
                 <img src="/img/galeria.png" alt="Logo do Site" class="Logo">
                 <h2><small>Galeria Awesome </small></h2>
             </a>   
-            <!-- Ícone do menu para dispositivos móveis -->
             <span id="toogleMenu">
                 <i class="fa-solid fa-bars fa-fw"></i>
             </span>            
         </header>
 
-         <!-- Menu de navegação -->
+        <!--Menu-->
         <nav>
             <!--Inicio-->
             <a href="/index.html" title="Home">
@@ -58,12 +56,55 @@
         <!--Conteúdo--> <!---->
         <main>
             <article>
-                <div class="intro">               
-                    <h1>Bem-vindo à Galeria Awesome!</h1>
-                    <p>Descubra uma coleção incrível de imagens capturadas com paixão e criatividade. Nossa galeria é o lugar perfeito para explorar, inspirar e se maravilhar com a arte visual.</p>
-                    <p>Navegue pelas nossas seções para ver as últimas adições, explorar galerias temáticas e aprender mais sobre quem somos. Esperamos que você aproveite a visita!</p>
-                </div>                
-               
+                <h1>Galeria de Fotos</h1>
+                <div class="galeria_1"> <!--Div da irá o flex-->
+                    <div class="foto"> <!--Imagem 1-->
+                        <img src="https://picsum.photos/200/300?random=1" alt="Imagem 1">
+                        <h4>Imagem 1</h4>
+                    </div>
+                    <div class="foto"><!--Imagem 2-->
+                        <img src="https://picsum.photos/200/300?random=2" alt="Imagem 2">
+                        <h4>Imagem 2</h4>
+                    </div>
+                    <div class="foto"> <!-- Imagem 3-->
+                        <img src="https://picsum.photos/seed/picsum/200/300" alt="Imagem 3">
+                        <h4>Imagem 3</h4>
+                    </div>
+                </div>
+
+                <div class="galeria_2">
+                    <div class="foto"> <!--Imagem 4-->
+                        <img src="https://picsum.photos/id/870/200/300?grayscale&blur=2" alt="Imagem 4">
+                        <h4>Imagem 4</h4>
+                    </div>
+                    <div class="foto"> <!--Imagem 5-->
+                        <img src="https://picsum.photos/200/300/?blur" alt="Imagem 5">
+                        <h4>Imagem 5</h4>
+                    </div>
+                    <div class="foto"> <!--Imagem 6-->
+                        <img src="https://picsum.photos/200/300?grayscale" alt="Imagem 6">
+                        <h4>Imagem 6</h4>                        
+                    </div>
+                </div>
+
+                <div class="galeria_3">
+                    <div class="foto"> <!--Imagem 7-->
+                        <img src="https://picsum.photos/200/300?random=1?grayscale&blur=2" alt="Imagem 4">
+                        <h4>Imagem 7</h4>
+                    </div>
+                    <div class="foto"> <!--Imagem 8-->
+                        <img src="https://picsum.photos/200/300?random=2?blur" alt="Imagem 5">
+                        <h4>Imagem 8</h4>
+                    </div>
+                    <div class="foto"> <!--Imagem 9-->
+                        <img src="https://picsum.photos/200/300?grayscale" alt="Imagem 6">
+                        <h4>Imagem 9</h4>                        
+                    </div>
+                    <div class="foto"> <!--Imagem 10-->
+                        <img src="https://picsum.photos/200/300?random=1grayscale" alt="Imagem 6">
+                        <h4>Imagem 10</h4>                        
+                    </div>
+                </div>
             </article>
         </main>
 
@@ -74,9 +115,8 @@
                     <p>&copy; 2024 Minha Galeria de Fotos</p>
                 </div>
                 <hr>
-                 <!-- Links úteis e redes sociais -->
+                
                 <div class="links_uteis" >
-                    <!-- Redes sociais -->
                     <nav title="Nossas Redes Sociais">
                         <h4>Redes Sociais</h4>
                         <a href="https://facebook.com" target="_blank" rel="noopener">
@@ -92,8 +132,7 @@
                             <span>Github</span>
                         </a>
                     </nav>           
-                                
-                     <!-- Links úteis do site -->
+                                   
                     <nav title="Links Ùteis do site">
                         <h4>Links Úteis</h4>
                         <a href="/policies.html">
@@ -118,7 +157,7 @@
         <div id="cortina"></div>
     </div>
     
-    <!-- Scripts JavaScript -->
+    <!--Javascript-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="/js/template.js"></script>
 </body>
